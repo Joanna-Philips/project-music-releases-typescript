@@ -1,7 +1,19 @@
 import React from 'react';
 import data from '../stretch-goal.json'
 
-export const Playlists = () => {
+type PlaylistsData = {
+  id: string;
+  external_urls: {
+    spotify: string;
+  }
+  name: string;
+}
+
+// type PlaylistsDataArray = {
+//   playlistInput: PlaylistsData[]
+// }
+
+export const Playlists: React.FC<PlaylistsData> = () => {
   return (
     <div className="playlists-container">
       <div className="playlists-header-container">
